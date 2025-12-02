@@ -23,9 +23,12 @@
     - [Part3: Security](Content/PreSecurity/Windows-Fundamentals/003-Part-3.md)
 
 ### Cyber Security 101 (COMPLETED)
-- [Start Your Cyber Security Journey]
-- [Windows and AD Fundamentals]
-- [Command Line]
+- [Search Skills](Content/CyberSecurity101/001-Search-Skills.md)
+- [Active Directory Basics](Content/CyberSecurity101/002-Active-Directory-Basics.md)
+- Command Line
+    - [Windows Command Line](Content/CyberSecurity101/Command-Line/001-Windows-Command-Line.md)
+    - [Windows Powershell](Content/CyberSecurity101/Command-Line/002-Windows-Powershell.md)
+    - [Linux Shells](Content/CyberSecurity101/Command-Line/003-Linux-Shells.md)
 - [Networking]
 - [Cryptography]
 - [Exploitation Basics]
