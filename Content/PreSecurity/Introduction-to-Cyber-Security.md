@@ -1,6 +1,6 @@
 # Introduction to Cyber Security
 
-## **Security Analyst**
+## Security Analyst
 
 **Focus:** Evaluating and strengthening an organisation’s cybersecurity posture.
 
@@ -10,7 +10,7 @@
 - Report and document security issues and remediation actions.
 - Develop security strategies based on research into attack trends and tools.
 
-## **Security Engineer**
+## Security Engineer
 
 **Focus:** Designing and implementing security solutions to prevent attacks.
 
@@ -20,7 +20,7 @@
 - Identify vulnerabilities and deploy mitigation solutions.
 - Maintain and upgrade defences to address evolving threats.
 
-## **Incident Responder**
+## Incident Responder
 
 **Focus:** Managing and mitigating security breaches in real time.
 
@@ -30,7 +30,7 @@
 - Coordinate responses to active threats; measure efficiency via **MTTD**, **MTTA**, and **MTTR**.
 - Conduct post-incident analysis and implement preventative improvements.
 
-## **Digital Forensic Examiner**
+## Digital Forensic Examiner
 
 **Focus:** Collecting and analysing digital evidence to uncover causes of security incidents or crimes.
 
@@ -40,7 +40,7 @@
 - Analyse data to establish facts and conclusions.
 - Document and report findings for legal or organisational use.
 
-## **Malware Analyst**
+## Malware Analyst
 
 **Focus:** Investigating malicious software to understand, detect, and mitigate it.
 
@@ -50,7 +50,7 @@
 - Conduct **dynamic analysis** (observe malware behaviour in controlled environments).
 - Report findings on functionality, detection methods, and threats.
 
-## **Penetration Tester (Ethical Hacker)**
+## Penetration Tester (Ethical Hacker)
 
 **Focus:** Testing and exploiting vulnerabilities to assess security strength.
 
@@ -60,7 +60,7 @@
 - Perform audits, risk assessments, and security reviews.
 - Provide detailed reports with mitigation recommendations.
 
-## **Red Teamer**
+## Red Teamer
 
 **Focus:** Simulating advanced, realistic attacks to test an organisation’s **detection and response** capabilities.
 

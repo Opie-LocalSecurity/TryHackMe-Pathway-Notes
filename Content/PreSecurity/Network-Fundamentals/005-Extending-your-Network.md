@@ -58,25 +58,35 @@
     - Support configurations such as port forwarding and firewall rules.
 - **Key Role:** Directs traffic between networks (e.g., local and Internet).
 
-|  | **🧭 OSPF (Open Shortest Path First)** | **🛣️ RIP (Routing Information Protocol)** |
-| --- | --- | --- |
-| **Key Characteristics:** | • **Type:** **Link-State** routing protocol.
-• **Metric:** **Cost**, which is calculated based on **link bandwidth** (default formula: $10^8 / \text{Bandwidth in bps}$).
-• **Algorithm:** Uses **Dijkstra's Shortest Path First (SPF) algorithm** to construct a topological map of the entire network.
-• **Update Mechanism:** Routers send **Link State Advertisements (LSAs)** only when a network change occurs, and every 30 minutes to ensure database synchronization. | • **Type:** **Distance-Vector** routing protocol.
-• **Metric:** **Hop Count** (number of routers traversed).
-• **Algorithm:** Uses the **Bellman-Ford algorithm** (or a variation).
-• **Update Mechanism:** Routers send their **entire routing table** to their immediate neighbors every **30 seconds**, regardless of whether the network has changed. |
-| **👍 Advantages:** | • **Scalability:** Highly **scalable** and suited for large, complex networks because it supports **hierarchical design** (Areas).
-• **Convergence:** Very **fast convergence** due to event-triggered updates, allowing quick adaptation to network changes.
-• **Loop-Free:** The SPF algorithm guarantees a **loop-free** routing topology.
-• **Intelligent Path:** Chooses the best path based on **bandwidth**, providing more efficient traffic distribution. | • **Simplicity:** Very **easy to configure and implement**, making it suitable for small environments.
-• **Low Overhead (Initial):** Requires **less initial processing power** compared to OSPF's database creation. |
-| **👎 Disadvantages:** | • **Complexity:** More **complex to configure and troubleshoot** than RIP.
-• **Overhead:** Requires **more CPU and memory resources** from the routers to run the SPF algorithm and maintain the link-state database. | • **Scalability Limit:** Has a maximum hop count of **15** (a path of 16 hops is considered unreachable), severely limiting network size.
-• **Convergence:** **Slow convergence** due to periodic updates and reliance on timers (e.g., hold-down timers) to resolve network issues.
-• **Less Efficient Path:** Only considers the **number of hops**, potentially choosing a slower path over a fast, high-bandwidth path that has one more hop.
-• **Bandwidth Use:** Periodic broadcasts of the **entire routing table** can consume unnecessary network bandwidth, even when the network is stable. |
+### OSPF (Open Shortest Path First)
+- Key Characteristics:
+    - Type: Link-State routing protocol.
+    - Metric: Cost, which is calculated based on link bandwidth (default formula: $10^8 / \text{Bandwidth in bps}$).
+    - Algorithm: Uses Dijkstra's Shortest Path First (SPF) algorithm to construct a topological map of the entire network.
+    - Update Mechanism: Routers send Link State Advertisements (LSAs) only when a network change occurs, and every 30 minutes to ensure database synchronization.
+- Advantages:
+    - Scalability: Highly scalable and suited for large, complex networks because it supports hierarchical design (Areas).
+    - Convergence: Very fast convergence due to event-triggered updates, allowing quick adaptation to network changes.
+    - Loop-Free: The SPF algorithm guarantees a loop-free routing topology.
+    - Intelligent Path: Chooses the best path based on bandwidth, providing more efficient traffic distribution.
+- Disavantages:
+    - Complexity: More complex to configure and troubleshoot than RIP.
+    - Overhead: Requires more CPU and memory resources from the routers to run the SPF algorithm and maintain the link-state database.
+
+### RIP (Routing Information Protocol)
+- Key Characteristics:
+    - Type: Distance-Vector routing protocol.
+    - Metric: Hop Count (number of routers traversed).
+    - Algorithm: Uses the Bellman-Ford algorithm (or a variation).
+    - Update Mechanism: Routers send their entire routing table to their immediate neighbors every 30 seconds, regardless of whether the network has changed.
+- Advantages:
+    - Simplicity: Very easy to configure and implement, making it suitable for small environments.
+    - Low Overhead (Initial): Requires less initial processing power compared to OSPF's database creation.
+- Disavantages:
+    - Scalability Limit: Has a maximum hop count of 15 (a path of 16 hops is considered unreachable), severely limiting network size.
+    - Convergence: Slow convergence due to periodic updates and reliance on timers (e.g., hold-down timers) to resolve network issues.
+    - Less Efficient Path: Only considers the number of hops, potentially choosing a slower path over a fast, high-bandwidth path that has one more hop.
+    - Bandwidth Use: Periodic broadcasts of the entire routing table can consume unnecessary network bandwidth, even when the network is stable.
 
 ### Switches
 

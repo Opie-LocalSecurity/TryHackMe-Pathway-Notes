@@ -1,6 +1,6 @@
 # OSI Model
 
-## 🧩 OSI Model Overview**
+## 🧩 OSI Model Overview
 
 - **Full name:** Open Systems Interconnection Model
 - **Purpose:** Standard framework that defines how devices communicate over a network.
